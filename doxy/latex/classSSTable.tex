@@ -1,0 +1,164 @@
+\hypertarget{classSSTable}{}\doxysection{S\+S\+Table Class Reference}
+\label{classSSTable}\index{SSTable@{SSTable}}
+
+
+Class to represent a Single \mbox{\hyperlink{classSSTable}{S\+S\+Table}} (Sorted String Table)  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSSTable_a06feae6781050005f8cb133e7d9406e8}{S\+S\+Table}} (const pair$<$ int, pair$<$ string, string $>$ $\ast$ $>$ \&data=\{0, nullptr\}, string fname=T\+O\+M\+B\+S\+T\+O\+NE)
+\begin{DoxyCompactList}\small\item\em Constructor to initialize an \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSSTable_ac054bd2a736e2c6f0e92081b0f363cbe}\label{classSSTable_ac054bd2a736e2c6f0e92081b0f363cbe}} 
+\mbox{\hyperlink{classSSTable_ac054bd2a736e2c6f0e92081b0f363cbe}{$\sim$\+S\+S\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Destructor to clean up resources. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSSTable_a86dcab61790088cc235b6d473252f18d}{get\+\_\+num\+\_\+keys}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of keys in the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classSSTable_a2341162a2478668375dcfd23a311f5c6}{get\+\_\+folder\+\_\+name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the folder name of the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. \end{DoxyCompactList}\item 
+pair$<$ bool, string $>$ \mbox{\hyperlink{classSSTable_a44249df432cac721a0bd708acc2a0aa8}{find}} (const string key)
+\begin{DoxyCompactList}\small\item\em Finds a value for the given key using the Bloom filter and binary search. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSSTable_aae95ee8d5e167ba4e0e81745a9316b63}{store\+\_\+keyval\+\_\+index}} (const pair$<$ int, int $>$ $\ast$data, int num\+\_\+pairs)
+\begin{DoxyCompactList}\small\item\em Stores the index of key-\/value pairs into binary files. \end{DoxyCompactList}\item 
+pair$<$ int, int $>$ $\ast$ \mbox{\hyperlink{classSSTable_a28feb8cb9029a97bfb1fef74134ff55d}{store\+\_\+keyval\+\_\+data}} (const string $\ast$data, int num\+\_\+keys)
+\begin{DoxyCompactList}\small\item\em Stores key-\/value data into text files and returns the file offsets. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSSTable_a016bdca67881ddf78096078f7911f786}\label{classSSTable_a016bdca67881ddf78096078f7911f786}} 
+{\bfseries S\+S\+Table} (const std\+::pair$<$ int, std\+::pair$<$ std\+::string, std\+::string $>$ $\ast$ $>$ \&data=\{0, nullptr\}, std\+::string fname=T\+O\+M\+B\+S\+T\+O\+NE)
+\item 
+\mbox{\Hypertarget{classSSTable_a86dcab61790088cc235b6d473252f18d}\label{classSSTable_a86dcab61790088cc235b6d473252f18d}} 
+int {\bfseries get\+\_\+num\+\_\+keys} ()
+\item 
+\mbox{\Hypertarget{classSSTable_a44d6da104088324b7ea874bb4f6b1e07}\label{classSSTable_a44d6da104088324b7ea874bb4f6b1e07}} 
+std\+::string {\bfseries get\+\_\+folder\+\_\+name} ()
+\item 
+\mbox{\Hypertarget{classSSTable_ad353f51a2df2c6a9b1dbd3f994864400}\label{classSSTable_ad353f51a2df2c6a9b1dbd3f994864400}} 
+std\+::pair$<$ bool, std\+::string $>$ {\bfseries find} (const std\+::string key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to represent a Single \mbox{\hyperlink{classSSTable}{S\+S\+Table}} (Sorted String Table) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSSTable_a06feae6781050005f8cb133e7d9406e8}\label{classSSTable_a06feae6781050005f8cb133e7d9406e8}} 
+\index{SSTable@{SSTable}!SSTable@{SSTable}}
+\index{SSTable@{SSTable}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{SSTable()}{SSTable()}}
+{\footnotesize\ttfamily S\+S\+Table\+::\+S\+S\+Table (\begin{DoxyParamCaption}\item[{const pair$<$ int, pair$<$ string, string $>$ $\ast$ $>$ \&}]{data = {\ttfamily \{0,~nullptr\}},  }\item[{string}]{fname = {\ttfamily TOMBSTONE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor to initialize an \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. 
+
+The constructor creates a folder and stores key-\/value pairs into binary files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to be inserted into the \mbox{\hyperlink{classSSTable}{S\+S\+Table}} (size and key-\/value pairs). \\
+\hline
+{\em fname} & Folder name where \mbox{\hyperlink{classSSTable}{S\+S\+Table}} data will be stored. Defaults to T\+O\+M\+B\+S\+T\+O\+NE if not provided. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSSTable_a44249df432cac721a0bd708acc2a0aa8}\label{classSSTable_a44249df432cac721a0bd708acc2a0aa8}} 
+\index{SSTable@{SSTable}!find@{find}}
+\index{find@{find}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily pair$<$bool, string$>$ S\+S\+Table\+::find (\begin{DoxyParamCaption}\item[{const string}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Finds a value for the given key using the Bloom filter and binary search. 
+
+This function searches for a key in the \mbox{\hyperlink{classSSTable}{S\+S\+Table}} using the Bloom filter and binary search.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair indicating if the key was found and its associated value (or T\+O\+M\+B\+S\+T\+O\+NE if not found). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSSTable_a2341162a2478668375dcfd23a311f5c6}\label{classSSTable_a2341162a2478668375dcfd23a311f5c6}} 
+\index{SSTable@{SSTable}!get\_folder\_name@{get\_folder\_name}}
+\index{get\_folder\_name@{get\_folder\_name}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{get\_folder\_name()}{get\_folder\_name()}}
+{\footnotesize\ttfamily string S\+S\+Table\+::get\+\_\+folder\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the folder name of the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. 
+
+This function returns the folder name where the \mbox{\hyperlink{classSSTable}{S\+S\+Table}} data is stored.
+
+\begin{DoxyReturn}{Returns}
+The folder name associated with the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSSTable_a86dcab61790088cc235b6d473252f18d}\label{classSSTable_a86dcab61790088cc235b6d473252f18d}} 
+\index{SSTable@{SSTable}!get\_num\_keys@{get\_num\_keys}}
+\index{get\_num\_keys@{get\_num\_keys}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{get\_num\_keys()}{get\_num\_keys()}}
+{\footnotesize\ttfamily int S\+S\+Table\+::get\+\_\+num\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the number of keys in the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. 
+
+This function returns the number of key-\/value pairs in the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}.
+
+\begin{DoxyReturn}{Returns}
+The number of keys in the \mbox{\hyperlink{classSSTable}{S\+S\+Table}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSSTable_a28feb8cb9029a97bfb1fef74134ff55d}\label{classSSTable_a28feb8cb9029a97bfb1fef74134ff55d}} 
+\index{SSTable@{SSTable}!store\_keyval\_data@{store\_keyval\_data}}
+\index{store\_keyval\_data@{store\_keyval\_data}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{store\_keyval\_data()}{store\_keyval\_data()}}
+{\footnotesize\ttfamily pair$<$int, int$>$$\ast$ S\+S\+Table\+::store\+\_\+keyval\+\_\+data (\begin{DoxyParamCaption}\item[{const string $\ast$}]{data,  }\item[{int}]{num\+\_\+keys }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores key-\/value data into text files and returns the file offsets. 
+
+This function stores the encoded key-\/value pairs into text files and returns the offsets where each pair is stored.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & An array of encoded key-\/value pairs. \\
+\hline
+{\em num\+\_\+keys} & The total number of key-\/value pairs to store.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to an array of offsets for each key-\/value pair stored in files. 
+\end{DoxyReturn}
+$<$ Maximum file size for each text file
+
+$<$ Open a new text file\mbox{\Hypertarget{classSSTable_aae95ee8d5e167ba4e0e81745a9316b63}\label{classSSTable_aae95ee8d5e167ba4e0e81745a9316b63}} 
+\index{SSTable@{SSTable}!store\_keyval\_index@{store\_keyval\_index}}
+\index{store\_keyval\_index@{store\_keyval\_index}!SSTable@{SSTable}}
+\doxysubsubsection{\texorpdfstring{store\_keyval\_index()}{store\_keyval\_index()}}
+{\footnotesize\ttfamily void S\+S\+Table\+::store\+\_\+keyval\+\_\+index (\begin{DoxyParamCaption}\item[{const pair$<$ int, int $>$ $\ast$}]{data,  }\item[{int}]{num\+\_\+pairs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stores the index of key-\/value pairs into binary files. 
+
+This function stores key-\/value pair indices into multiple binary files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A pointer to the array of key-\/value pair indices. \\
+\hline
+{\em num\+\_\+pairs} & The total number of pairs. \\
+\hline
+\end{DoxyParams}
+$<$ Maximum pairs per file
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lsm.\+cpp\item 
+lsm.\+h\end{DoxyCompactItemize}

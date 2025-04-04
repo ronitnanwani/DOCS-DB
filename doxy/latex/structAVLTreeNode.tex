@@ -1,0 +1,144 @@
+\hypertarget{structAVLTreeNode}{}\doxysection{A\+V\+L\+Tree\+Node Struct Reference}
+\label{structAVLTreeNode}\index{AVLTreeNode@{AVLTreeNode}}
+
+
+Represents a node in the A\+VL Tree, which contains a key-\/value pair and maintains balance information for A\+VL tree operations.  
+
+
+
+
+Collaboration diagram for A\+V\+L\+Tree\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{structAVLTreeNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structAVLTreeNode_ade2a1f13a6eed4a4ea39e04ef7c72fe7}{A\+V\+L\+Tree\+Node}} (const string \&\mbox{\hyperlink{structAVLTreeNode_a8cb04f8e497710707fb62dfc260d699a}{key}}, const string \&\mbox{\hyperlink{structAVLTreeNode_a0d7c6a9fbe21171681ba8866d4512f11}{value}})
+\begin{DoxyCompactList}\small\item\em Constructor to create a new A\+VL tree node with a key-\/value pair. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a6e26ee90fb7ccd1dfa1b42708e693c0f}\label{structAVLTreeNode_a6e26ee90fb7ccd1dfa1b42708e693c0f}} 
+void \mbox{\hyperlink{structAVLTreeNode_a6e26ee90fb7ccd1dfa1b42708e693c0f}{update\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Updates the count and height of the node. The count is the total number of nodes in the subtree, including this node. The height is the maximum depth of the node from its children. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structAVLTreeNode_aeb668ea5987c4dbccefdd7bd03c8dc9e}{balance\+Factor}} ()
+\begin{DoxyCompactList}\small\item\em Computes the balance factor of the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ \mbox{\hyperlink{structAVLTreeNode_a280bbcc702ae4fab16e04f14061eb0e9}{left\+\_\+rotate}} ()
+\begin{DoxyCompactList}\small\item\em Performs a left rotation on the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ \mbox{\hyperlink{structAVLTreeNode_a32683f17507151ae2fc6a1ddfdd442a7}{right\+\_\+rotate}} ()
+\begin{DoxyCompactList}\small\item\em Performs a right rotation on the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_afac343631e76fdf41d3446d13a373b58}\label{structAVLTreeNode_afac343631e76fdf41d3446d13a373b58}} 
+{\bfseries A\+V\+L\+Tree\+Node} (const std\+::string \&\mbox{\hyperlink{structAVLTreeNode_a8cb04f8e497710707fb62dfc260d699a}{key}}, const std\+::string \&\mbox{\hyperlink{structAVLTreeNode_a0d7c6a9fbe21171681ba8866d4512f11}{value}})
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_a6e26ee90fb7ccd1dfa1b42708e693c0f}\label{structAVLTreeNode_a6e26ee90fb7ccd1dfa1b42708e693c0f}} 
+void {\bfseries update\+Values} ()
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_aeb668ea5987c4dbccefdd7bd03c8dc9e}\label{structAVLTreeNode_aeb668ea5987c4dbccefdd7bd03c8dc9e}} 
+int {\bfseries balance\+Factor} ()
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_a82566cde2c3303033bdfcf83b3cf9256}\label{structAVLTreeNode_a82566cde2c3303033bdfcf83b3cf9256}} 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ {\bfseries left\+\_\+rotate} ()
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_af0d62e8659b6dd1e76a74a84338f7150}\label{structAVLTreeNode_af0d62e8659b6dd1e76a74a84338f7150}} 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ {\bfseries right\+\_\+rotate} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_a656efd0bd04991b45d3f16ec33d0b019}\label{structAVLTreeNode_a656efd0bd04991b45d3f16ec33d0b019}} 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ \mbox{\hyperlink{structAVLTreeNode_a656efd0bd04991b45d3f16ec33d0b019}{left}}
+\begin{DoxyCompactList}\small\item\em Pointer to the left child node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a8b262b9ac1b4656e1c9a2004ff6be670}\label{structAVLTreeNode_a8b262b9ac1b4656e1c9a2004ff6be670}} 
+\mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ \mbox{\hyperlink{structAVLTreeNode_a8b262b9ac1b4656e1c9a2004ff6be670}{right}}
+\begin{DoxyCompactList}\small\item\em Pointer to the right child node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a8cb04f8e497710707fb62dfc260d699a}\label{structAVLTreeNode_a8cb04f8e497710707fb62dfc260d699a}} 
+string \mbox{\hyperlink{structAVLTreeNode_a8cb04f8e497710707fb62dfc260d699a}{key}}
+\begin{DoxyCompactList}\small\item\em The key of the node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a0d7c6a9fbe21171681ba8866d4512f11}\label{structAVLTreeNode_a0d7c6a9fbe21171681ba8866d4512f11}} 
+string \mbox{\hyperlink{structAVLTreeNode_a0d7c6a9fbe21171681ba8866d4512f11}{value}}
+\begin{DoxyCompactList}\small\item\em The value associated with the key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a516ef23e8a001ff57c6c4087ca835c4d}\label{structAVLTreeNode_a516ef23e8a001ff57c6c4087ca835c4d}} 
+int \mbox{\hyperlink{structAVLTreeNode_a516ef23e8a001ff57c6c4087ca835c4d}{count}}
+\begin{DoxyCompactList}\small\item\em The size of the subtree rooted at this node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a8ed23ee086ec5d83949b2e540bb4098a}\label{structAVLTreeNode_a8ed23ee086ec5d83949b2e540bb4098a}} 
+int \mbox{\hyperlink{structAVLTreeNode_a8ed23ee086ec5d83949b2e540bb4098a}{height}}
+\begin{DoxyCompactList}\small\item\em The height of the node in the A\+VL tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structAVLTreeNode_a339d92ea9187f9940f0ac78fd919b76b}\label{structAVLTreeNode_a339d92ea9187f9940f0ac78fd919b76b}} 
+std\+::string {\bfseries key}
+\item 
+\mbox{\Hypertarget{structAVLTreeNode_a38a4db82abf57803a917666c2f97ca6e}\label{structAVLTreeNode_a38a4db82abf57803a917666c2f97ca6e}} 
+std\+::string {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a node in the A\+VL Tree, which contains a key-\/value pair and maintains balance information for A\+VL tree operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structAVLTreeNode_ade2a1f13a6eed4a4ea39e04ef7c72fe7}\label{structAVLTreeNode_ade2a1f13a6eed4a4ea39e04ef7c72fe7}} 
+\index{AVLTreeNode@{AVLTreeNode}!AVLTreeNode@{AVLTreeNode}}
+\index{AVLTreeNode@{AVLTreeNode}!AVLTreeNode@{AVLTreeNode}}
+\doxysubsubsection{\texorpdfstring{AVLTreeNode()}{AVLTreeNode()}}
+{\footnotesize\ttfamily A\+V\+L\+Tree\+Node\+::\+A\+V\+L\+Tree\+Node (\begin{DoxyParamCaption}\item[{const string \&}]{key,  }\item[{const string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Constructor to create a new A\+VL tree node with a key-\/value pair. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key for the node. \\
+\hline
+{\em value} & The value associated with the key. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structAVLTreeNode_aeb668ea5987c4dbccefdd7bd03c8dc9e}\label{structAVLTreeNode_aeb668ea5987c4dbccefdd7bd03c8dc9e}} 
+\index{AVLTreeNode@{AVLTreeNode}!balanceFactor@{balanceFactor}}
+\index{balanceFactor@{balanceFactor}!AVLTreeNode@{AVLTreeNode}}
+\doxysubsubsection{\texorpdfstring{balanceFactor()}{balanceFactor()}}
+{\footnotesize\ttfamily int A\+V\+L\+Tree\+Node\+::balance\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes the balance factor of the node. 
+
+\begin{DoxyReturn}{Returns}
+The difference between the height of the left and right subtrees. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structAVLTreeNode_a280bbcc702ae4fab16e04f14061eb0e9}\label{structAVLTreeNode_a280bbcc702ae4fab16e04f14061eb0e9}} 
+\index{AVLTreeNode@{AVLTreeNode}!left\_rotate@{left\_rotate}}
+\index{left\_rotate@{left\_rotate}!AVLTreeNode@{AVLTreeNode}}
+\doxysubsubsection{\texorpdfstring{left\_rotate()}{left\_rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ A\+V\+L\+Tree\+Node\+::left\+\_\+rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs a left rotation on the node. 
+
+\begin{DoxyReturn}{Returns}
+The new root of the rotated subtree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structAVLTreeNode_a32683f17507151ae2fc6a1ddfdd442a7}\label{structAVLTreeNode_a32683f17507151ae2fc6a1ddfdd442a7}} 
+\index{AVLTreeNode@{AVLTreeNode}!right\_rotate@{right\_rotate}}
+\index{right\_rotate@{right\_rotate}!AVLTreeNode@{AVLTreeNode}}
+\doxysubsubsection{\texorpdfstring{right\_rotate()}{right\_rotate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structAVLTreeNode}{A\+V\+L\+Tree\+Node}} $\ast$ A\+V\+L\+Tree\+Node\+::right\+\_\+rotate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Performs a right rotation on the node. 
+
+\begin{DoxyReturn}{Returns}
+The new root of the rotated subtree. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+avl\+\_\+tree.\+cpp\item 
+avl\+\_\+tree.\+h\end{DoxyCompactItemize}

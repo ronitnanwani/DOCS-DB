@@ -1,0 +1,176 @@
+\hypertarget{classAVLTree}{}\doxysection{A\+V\+L\+Tree Class Reference}
+\label{classAVLTree}\index{AVLTree@{AVLTree}}
+
+
+A self-\/balancing binary search tree (A\+VL tree) that supports insertion, deletion, search, and retrieval of sorted key-\/value pairs.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAVLTree_a0915d328ebed07e11087692f17d80827}\label{classAVLTree_a0915d328ebed07e11087692f17d80827}} 
+\mbox{\hyperlink{classAVLTree_a0915d328ebed07e11087692f17d80827}{A\+V\+L\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor that initializes an empty A\+VL tree. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAVLTree_af4a1d1be1b6301ba59c6e101c6efc6ba}\label{classAVLTree_af4a1d1be1b6301ba59c6e101c6efc6ba}} 
+\mbox{\hyperlink{classAVLTree_af4a1d1be1b6301ba59c6e101c6efc6ba}{$\sim$\+A\+V\+L\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor that clears the A\+VL tree and frees memory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAVLTree_a7b7d7aab35010539cf349b37bbb5b3ec}\label{classAVLTree_a7b7d7aab35010539cf349b37bbb5b3ec}} 
+void \mbox{\hyperlink{classAVLTree_a7b7d7aab35010539cf349b37bbb5b3ec}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clears the A\+VL tree, removing all nodes and resetting the size. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAVLTree_a69172f24e936e280c4899529ba236bed}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the A\+VL tree is empty. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAVLTree_addbcc546f930e10a0ab3c0b06cf92960}{size}} () const
+\begin{DoxyCompactList}\small\item\em Returns the number of nodes in the A\+VL tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAVLTree_a11753701da8afe81695aaff4488b8079}{insert}} (const string \&key, const string \&value)
+\begin{DoxyCompactList}\small\item\em Inserts a key-\/value pair into the A\+VL tree. If the key already exists, its value is updated. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAVLTree_a13b9e0441e80233027da5409e6604960}{erase}} (const string \&key)
+\begin{DoxyCompactList}\small\item\em Deletes a key-\/value pair from the A\+VL tree. \end{DoxyCompactList}\item 
+pair$<$ bool, string $>$ \mbox{\hyperlink{classAVLTree_a7a1824fd067b5cad451983d6b262286c}{find}} (const string \&key) const
+\begin{DoxyCompactList}\small\item\em Searches for a key in the A\+VL tree. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{classAVLTree_ad87eeb6b92021887c26d721f251eb0c4}{operator\mbox{[}$\,$\mbox{]}}} (int idx) const
+\begin{DoxyCompactList}\small\item\em Overloads the subscript operator to access values by index. \end{DoxyCompactList}\item 
+vector$<$ pair$<$ string, string $>$ $>$ \mbox{\hyperlink{classAVLTree_a20f0f1270e41576313eff408dea98707}{get\+Sorted\+Pairs}} () const
+\begin{DoxyCompactList}\small\item\em Retrieves all key-\/value pairs in the tree, sorted by key. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classAVLTree_a74f60747fe9a6ba81b339647aaf10473}\label{classAVLTree_a74f60747fe9a6ba81b339647aaf10473}} 
+void {\bfseries insert} (const std\+::string \&key, const std\+::string \&value)
+\item 
+\mbox{\Hypertarget{classAVLTree_ace7c6ae97fcf0e3184cbd876bf8e594d}\label{classAVLTree_ace7c6ae97fcf0e3184cbd876bf8e594d}} 
+void {\bfseries erase} (const std\+::string \&key)
+\item 
+\mbox{\Hypertarget{classAVLTree_a7b7d7aab35010539cf349b37bbb5b3ec}\label{classAVLTree_a7b7d7aab35010539cf349b37bbb5b3ec}} 
+void {\bfseries clear} ()
+\item 
+\mbox{\Hypertarget{classAVLTree_a69172f24e936e280c4899529ba236bed}\label{classAVLTree_a69172f24e936e280c4899529ba236bed}} 
+bool {\bfseries empty} () const
+\item 
+\mbox{\Hypertarget{classAVLTree_addbcc546f930e10a0ab3c0b06cf92960}\label{classAVLTree_addbcc546f930e10a0ab3c0b06cf92960}} 
+int {\bfseries size} () const
+\item 
+\mbox{\Hypertarget{classAVLTree_a5c08616fa8a7e806613270fffa73a077}\label{classAVLTree_a5c08616fa8a7e806613270fffa73a077}} 
+std\+::pair$<$ bool, std\+::string $>$ {\bfseries find} (const std\+::string \&key) const
+\item 
+\mbox{\Hypertarget{classAVLTree_a25df88d40acc1a51b17fcf22dbcbfba1}\label{classAVLTree_a25df88d40acc1a51b17fcf22dbcbfba1}} 
+std\+::string {\bfseries operator\mbox{[}$\,$\mbox{]}} (int idx) const
+\item 
+\mbox{\Hypertarget{classAVLTree_afe1caa10043fbb7562d2aabde226317e}\label{classAVLTree_afe1caa10043fbb7562d2aabde226317e}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ {\bfseries get\+Sorted\+Pairs} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A self-\/balancing binary search tree (A\+VL tree) that supports insertion, deletion, search, and retrieval of sorted key-\/value pairs. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAVLTree_a69172f24e936e280c4899529ba236bed}\label{classAVLTree_a69172f24e936e280c4899529ba236bed}} 
+\index{AVLTree@{AVLTree}!empty@{empty}}
+\index{empty@{empty}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool A\+V\+L\+Tree\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the A\+VL tree is empty. 
+
+\begin{DoxyReturn}{Returns}
+true if the tree is empty, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAVLTree_a13b9e0441e80233027da5409e6604960}\label{classAVLTree_a13b9e0441e80233027da5409e6604960}} 
+\index{AVLTree@{AVLTree}!erase@{erase}}
+\index{erase@{erase}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily void A\+V\+L\+Tree\+::erase (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})}
+
+
+
+Deletes a key-\/value pair from the A\+VL tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to delete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAVLTree_a7a1824fd067b5cad451983d6b262286c}\label{classAVLTree_a7a1824fd067b5cad451983d6b262286c}} 
+\index{AVLTree@{AVLTree}!find@{find}}
+\index{find@{find}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily pair$<$ bool, string $>$ A\+V\+L\+Tree\+::find (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const}
+
+
+
+Searches for a key in the A\+VL tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair where the first element is a boolean indicating whether the key exists, and the second element is the value associated with the key (or a tombstone). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAVLTree_a20f0f1270e41576313eff408dea98707}\label{classAVLTree_a20f0f1270e41576313eff408dea98707}} 
+\index{AVLTree@{AVLTree}!getSortedPairs@{getSortedPairs}}
+\index{getSortedPairs@{getSortedPairs}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{getSortedPairs()}{getSortedPairs()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ string, string $>$ $>$ A\+V\+L\+Tree\+::get\+Sorted\+Pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retrieves all key-\/value pairs in the tree, sorted by key. 
+
+\begin{DoxyReturn}{Returns}
+A vector of pairs representing the sorted key-\/value pairs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAVLTree_a11753701da8afe81695aaff4488b8079}\label{classAVLTree_a11753701da8afe81695aaff4488b8079}} 
+\index{AVLTree@{AVLTree}!insert@{insert}}
+\index{insert@{insert}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void A\+V\+L\+Tree\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{key,  }\item[{const string \&}]{value }\end{DoxyParamCaption})}
+
+
+
+Inserts a key-\/value pair into the A\+VL tree. If the key already exists, its value is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert. \\
+\hline
+{\em value} & The value associated with the key. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classAVLTree_ad87eeb6b92021887c26d721f251eb0c4}\label{classAVLTree_ad87eeb6b92021887c26d721f251eb0c4}} 
+\index{AVLTree@{AVLTree}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily string A\+V\+L\+Tree\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{idx }\end{DoxyParamCaption}) const}
+
+
+
+Overloads the subscript operator to access values by index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em idx} & The index of the value to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value at the given index in the A\+VL tree. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAVLTree_addbcc546f930e10a0ab3c0b06cf92960}\label{classAVLTree_addbcc546f930e10a0ab3c0b06cf92960}} 
+\index{AVLTree@{AVLTree}!size@{size}}
+\index{size@{size}!AVLTree@{AVLTree}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int A\+V\+L\+Tree\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns the number of nodes in the A\+VL tree. 
+
+\begin{DoxyReturn}{Returns}
+The size of the A\+VL tree. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+avl\+\_\+tree.\+cpp\item 
+avl\+\_\+tree.\+h\end{DoxyCompactItemize}

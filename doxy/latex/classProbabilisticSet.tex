@@ -1,0 +1,96 @@
+\hypertarget{classProbabilisticSet}{}\doxysection{Probabilistic\+Set Class Reference}
+\label{classProbabilisticSet}\index{ProbabilisticSet@{ProbabilisticSet}}
+
+
+A class representing a probabilistic set using a Bloom filter.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProbabilisticSet_a94d4c55e31f5df9a589020424c393799}{Probabilistic\+Set}} (int max\+Items=M\+A\+X\+\_\+\+I\+T\+E\+MS)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classProbabilisticSet}{Probabilistic\+Set}} with a given maximum number of items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProbabilisticSet_a23ee95c597ef6640ef19cf9a94e4439b}{insert}} (const string \&key)
+\begin{DoxyCompactList}\small\item\em Adds a key to the probabilistic set. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classProbabilisticSet_a2805dc5097e0d68aa994c0d62837191b}{exists}} (const string \&key) const
+\begin{DoxyCompactList}\small\item\em Checks if a key might exist in the probabilistic set. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classProbabilisticSet_a94d4c55e31f5df9a589020424c393799}\label{classProbabilisticSet_a94d4c55e31f5df9a589020424c393799}} 
+{\bfseries Probabilistic\+Set} (int max\+Items=M\+A\+X\+\_\+\+I\+T\+E\+MS)
+\item 
+\mbox{\Hypertarget{classProbabilisticSet_a0b4c8da14c986db94554d04d4b0a2ec0}\label{classProbabilisticSet_a0b4c8da14c986db94554d04d4b0a2ec0}} 
+void {\bfseries insert} (const std\+::string \&key)
+\item 
+\mbox{\Hypertarget{classProbabilisticSet_a88337704ea8d6f0ce6fc02402eb4e584}\label{classProbabilisticSet_a88337704ea8d6f0ce6fc02402eb4e584}} 
+bool {\bfseries exists} (const std\+::string \&key) const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a probabilistic set using a Bloom filter. 
+
+This class provides a probabilistic way to check for membership of an item using a bit vector and multiple hash functions. It can be used for approximate membership testing, where false positives are possible, but false negatives are not. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classProbabilisticSet_a94d4c55e31f5df9a589020424c393799}\label{classProbabilisticSet_a94d4c55e31f5df9a589020424c393799}} 
+\index{ProbabilisticSet@{ProbabilisticSet}!ProbabilisticSet@{ProbabilisticSet}}
+\index{ProbabilisticSet@{ProbabilisticSet}!ProbabilisticSet@{ProbabilisticSet}}
+\doxysubsubsection{\texorpdfstring{ProbabilisticSet()}{ProbabilisticSet()}}
+{\footnotesize\ttfamily Probabilistic\+Set\+::\+Probabilistic\+Set (\begin{DoxyParamCaption}\item[{int}]{max\+Items = {\ttfamily MAX\+\_\+ITEMS} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructs a \mbox{\hyperlink{classProbabilisticSet}{Probabilistic\+Set}} with a given maximum number of items. 
+
+This constructor determines the optimal number of hash functions based on the size of the bit vector and the maximum number of items that the set will store. The number of hash functions is calculated to minimize false positive rates.
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Items} & The maximum number of items that the set will store. Default is 10000. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classProbabilisticSet_a2805dc5097e0d68aa994c0d62837191b}\label{classProbabilisticSet_a2805dc5097e0d68aa994c0d62837191b}} 
+\index{ProbabilisticSet@{ProbabilisticSet}!exists@{exists}}
+\index{exists@{exists}!ProbabilisticSet@{ProbabilisticSet}}
+\doxysubsubsection{\texorpdfstring{exists()}{exists()}}
+{\footnotesize\ttfamily bool Probabilistic\+Set\+::exists (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if a key might exist in the probabilistic set. 
+
+This method hashes the key and checks if all corresponding bits are set to 1. If any of the bits are 0, the key is definitely not in the set. However, if all bits are 1, the key might be in the set (due to the possibility of false positives).
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to check for existence in the set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the key might exist in the set, false if the key is definitely not in the set. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classProbabilisticSet_a23ee95c597ef6640ef19cf9a94e4439b}\label{classProbabilisticSet_a23ee95c597ef6640ef19cf9a94e4439b}} 
+\index{ProbabilisticSet@{ProbabilisticSet}!insert@{insert}}
+\index{insert@{insert}!ProbabilisticSet@{ProbabilisticSet}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Probabilistic\+Set\+::insert (\begin{DoxyParamCaption}\item[{const string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a key to the probabilistic set. 
+
+This method hashes the given key multiple times and sets the corresponding positions in the bit vector to 1. The key is added to the set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to insert into the set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+probabilistic\+\_\+set.\+cpp\item 
+probabilistic\+\_\+set.\+h\end{DoxyCompactItemize}
